@@ -5,64 +5,223 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AYAZ GROUP | Güneş Enerjisi ve GES Çözümleri</title>
 <meta name="description" content="AYAZ GROUP, Bursa ve çevresinde güneş enerjisi sistemleri, GES projeleri ve enerji depolama çözümleri sunar.">
-<meta name="theme-color" content="#16466a">
+<meta name="theme-color" content="#0d2b45">
 
 <style>
 :root{
- --blue:#16466a;
- --green:#269b73;
- --light:#f2f7fa;
- --text:#18364c;
- --muted:#607789;
+  --blue-dark:#0a192f;
+  --blue-main:#16466a;
+  --blue-light:#20639b;
+  --cyan-accent:#00d2ff;
+  --light-bg:#f4f8fb;
+  --text-dark:#18364c;
+  --text-muted:#607789;
+  --white:#ffffff;
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{margin:0;font-family:Arial, sans-serif;color:var(--text);background:var(--light);line-height:1.65}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:20;background:#fff;box-shadow:0 3px 18px #17334b12}
-.nav{max-width:1150px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:900;letter-spacing:1px;color:var(--blue)}
-.logo span{color:var(--green)}
-nav{display:flex;gap:20px;font-size:14px;font-weight:bold}
-nav a:hover{color:var(--green)}
-.menu{display:none;background:var(--blue);color:white;border:0;border-radius:8px;padding:8px 12px;font-size:21px}
 
-/* HERO BÖLÜMÜ VE GÜNEŞ PANELSİ ARKA PLANI */
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth; scroll-padding-top:80px;}
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:var(--text-dark);
+  background:var(--light-bg);
+  line-height:1.65;
+}
+a{text-decoration:none; color:inherit;}
+
+/* HEADER & NAV */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow:0 4px 20px rgba(10, 25, 47, 0.08);
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:16px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-size:26px;
+  font-weight:900;
+  letter-spacing:1px;
+  color:var(--blue-main);
+}
+.logo span{color:var(--cyan-accent);}
+nav{display:flex; gap:24px; font-size:15px; font-weight:600;}
+nav a{transition:color 0.3s;}
+nav a:hover{color:var(--cyan-accent);}
+
+/* HERO SECTION (GÜNEŞ PANELİ ARKA PLAN) */
 .hero{
- min-height:680px;
- position:relative;
- display:flex;
- align-items:center;
- overflow:hidden;
- background:#093049;
- color:white;
+  min-height:85vh;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  /* Şık ve yüksek kaliteli güneş paneli arka planı */
+  background: url('https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed;
+  color:var(--white);
 }
-.hero-photo{
- position:absolute;
- inset:0;
- width:100%;
- height:100%;
- object-fit:cover;
- object-position:center;
- opacity:0.85;
+
+/* Şık Mavi Radyal & Doğrusal Gradyan Katmanı */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.92) 0%, rgba(22, 70, 106, 0.8) 60%, rgba(0, 210, 255, 0.3) 100%);
+  z-index:1;
 }
-.hero::after{
- content:"";
- position:absolute;
- inset:0;
- background:linear-gradient(90deg, rgba(9,48,73,0.92) 0%, rgba(9,48,73,0.65) 50%, rgba(9,48,73,0.3) 100%);
-}
+
 .hero-content{
- position:relative;
- z-index:2;
- width:100%;
- max-width:1150px;
- margin:auto;
- padding:90px 24px;
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 24px;
 }
-.eyebrow{font-size:13px;letter-spacing:3px;font-weight:bold;color:#c9f5df;text-shadow:0 1px 3px rgba(0,0,0,0.5)}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:18px 0;max-width:750px;text-shadow:0 2px 10px rgba(0,0,0,0.4)}
-h1 span{color:#baf0d5}
-.hero p{font-size:19px;max-width:620px;color:#e2f1f8;text-shadow:0 1px 3px rgba(0,0,0,0.5)}
-.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;border:0;border-radius:8px;padding:13px 21px;font-weight:bold;
+.eyebrow{
+  font-size:14px;
+  letter-spacing:3px;
+  font-weight:700;
+  text-transform:uppercase;
+  color:var(--cyan-accent);
+  margin-bottom:12px;
+}
+h1{
+  font-size:clamp(36px, 5.5vw, 64px);
+  line-height:1.15;
+  margin-bottom:20px;
+  max-width:800px;
+  font-weight:800;
+}
+h1 span{
+  background: linear-gradient(120deg, #ffffff, var(--cyan-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p{
+  font-size:18px;
+  max-width:620px;
+  color:#d0e4f5;
+  margin-bottom:32px;
+}
+.actions{display:flex; gap:16px; flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  border-radius:8px;
+  padding:14px 28px;
+  font-weight:700;
+  font-size:15px;
+  transition:all 0.3s ease;
+  cursor:pointer;
+}
+.btn-primary{
+  background:var(--cyan-accent);
+  color:var(--blue-dark);
+  box-shadow:0 4px 15px rgba(0, 210, 255, 0.3);
+}
+.btn-primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(0, 210, 255, 0.5);
+}
+.btn-secondary{
+  border:2px solid rgba(255, 255, 255, 0.4);
+  color:var(--white);
+}
+.btn-secondary:hover{
+  background:rgba(255, 255, 255, 0.1);
+  border-color:var(--white);
+}
+
+/* ÖZELLİKLER BÖLÜMÜ (SADE MAVİ KARTLAR) */
+.features{
+  max-width:1200px;
+  margin:-50px auto 80px;
+  padding:0 24px;
+  position:relative;
+  z-index:3;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:24px;
+}
+.card{
+  background:var(--white);
+  padding:32px 24px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(10, 25, 47, 0.05);
+  border:1px solid #e1eaf0;
+  transition:transform 0.3s ease;
+}
+.card:hover{transform:translateY(-5px);}
+.card h3{color:var(--blue-main); margin-bottom:12px; font-size:20px;}
+.card p{color:var(--text-muted); font-size:14px; line-height:1.6;}
+
+/* FOOTER */
+footer{
+  background:var(--blue-dark);
+  color:#8892b0;
+  text-align:center;
+  padding:30px 24px;
+  font-size:14px;
+}
+
+@media(max-width:768px){
+  nav{display:none;}
+  .hero{min-height:70vh;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">AYAZ<span>GROUP</span></div>
+    <nav>
+      <a href="#kurumsal">Kurumsal</a>
+      <a href="#hizmetler">Hizmetlerimiz</a>
+      <a href="#projeler">GES Projeleri</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">Yenilenebilir Enerji Çözümleri</div>
+    <h1>Güneşin Gücüyle <span>Geleceği Aydınlatıyoruz</span></h1>
+    <p>AYAZ GROUP olarak Bursa ve çevresinde endüstriyel ve bireysel çatı GES sistemleri, arazi projeleri ve enerji depolama çözümleri sunuyoruz.</p>
+    <div class="actions">
+      <a href="#iletisim" class="btn btn-primary">Ücretsiz Keşif İste</a>
+      <a href="#hizmetler" class="btn btn-secondary">Projelerimizi İncele</a>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="card">
+    <h3>Çatı GES Sistemleri</h3>
+    <p>Fabrika ve konut çatılarına özel yüksek verimli güneş paneli kurulumları.</p>
+  </div>
+  <div class="card">
+    <h3>Arazi GES Projeleri</h3>
+    <p>Anahtar teslim arazi tipi güneş santrali kurulumu ve mühendislik hizmetleri.</p>
+  </div>
+  <div class="card">
+    <h3>Bakım & İşletme</h3>
+    <p>Mevcut santralleriniz için maksimum performans ve kesintisiz izleme desteği.</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 AYAZ GROUP. Tüm Hakları Saklıdır.</p>
+</footer>
+
+</body>
+</html>
