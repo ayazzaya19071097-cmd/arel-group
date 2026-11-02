@@ -7,9 +7,7 @@
 
 <title>AYAZ GROUP | Yenilenebilir Enerji ve GES Çözümleri</title>
 
-<meta name="description" content="AYAZ GROUP, Bursa ve çevresinde çatı GES, arazi GES, enerji depolama ve yenilenebilir enerji çözümleri sunar.">
-
-<meta name="keywords" content="AYAZ GROUP, GES, güneş enerjisi, yenilenebilir enerji, Bursa GES, enerji depolama">
+<meta name="description" content="AYAZ GROUP, Bursa ve çevresinde güneş enerjisi, GES projeleri ve enerji depolama çözümleri sunar.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#071a33">
 
@@ -18,7 +16,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-
 :root {
   --navy: #071a33;
   --dark: #030d1d;
@@ -48,8 +45,8 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 .container {
@@ -58,15 +55,15 @@ a {
   margin: auto;
 }
 
-/* LOGO VE HEADER */
+/* HEADER */
 
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(7,26,51,0.97);
+  background: rgba(7,26,51,.97);
   backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .navbar {
@@ -74,7 +71,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .brand-logo {
@@ -91,7 +88,6 @@ header {
 
 .brand-logo strong {
   display: block;
-  color: white;
   font-size: 23px;
   font-weight: 800;
   letter-spacing: 1px;
@@ -112,14 +108,14 @@ header {
 
 .nav-links {
   display: flex;
-  gap: 25px;
+  gap: 23px;
   align-items: center;
 }
 
 .nav-links a {
+  color: #d0d8e5;
   font-size: 13px;
   font-weight: 600;
-  color: #d0d8e5;
   transition: .3s;
 }
 
@@ -135,7 +131,6 @@ header {
   padding: 8px 13px;
   border-radius: 8px;
   font-size: 22px;
-  cursor: pointer;
 }
 
 /* HERO */
@@ -145,15 +140,46 @@ header {
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
+
   background:
-    linear-gradient(90deg, rgba(3,13,29,.97), rgba(3,13,29,.55)),
-    url('https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=2000&auto=format&fit=crop')
-    center/cover no-repeat;
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(56,211,159,.20),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 15% 80%,
+      rgba(0,102,255,.12),
+      transparent 35%
+    ),
+    linear-gradient(
+      125deg,
+      #020916 0%,
+      #071a33 50%,
+      #0b2941 100%
+    );
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  right: -120px;
+  bottom: -180px;
+  border: 1px solid rgba(56,211,159,.15);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 40px rgba(56,211,159,.025),
+    0 0 0 80px rgba(56,211,159,.025);
 }
 
 .hero-content {
   max-width: 780px;
   padding: 100px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-badge {
@@ -167,7 +193,7 @@ header {
 }
 
 .hero h1 {
-  font-size: clamp(38px, 6vw, 68px);
+  font-size: clamp(38px,6vw,68px);
   line-height: 1.15;
   margin-bottom: 25px;
   font-weight: 800;
@@ -218,7 +244,7 @@ header {
   color: var(--green);
 }
 
-/* GENEL BÖLÜMLER */
+/* GENERAL */
 
 section {
   padding: 90px 0;
@@ -237,7 +263,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: clamp(27px, 4vw, 40px);
+  font-size: clamp(27px,4vw,40px);
   margin: 10px 0;
 }
 
@@ -245,7 +271,7 @@ section {
   color: var(--gray);
 }
 
-/* HAKKIMIZDA */
+/* ABOUT */
 
 .about {
   background: var(--navy);
@@ -262,11 +288,11 @@ section {
   margin-top: 18px;
 }
 
-/* HİZMETLER */
+/* SERVICES */
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 22px;
 }
 
@@ -298,14 +324,14 @@ section {
   font-size: 14px;
 }
 
-/* PROJELER */
+/* PROJECTS */
 
 .projects {
   background: var(--navy);
 }
 
 .project-box {
-  background: linear-gradient(120deg, #102541, #0b1b32);
+  background: linear-gradient(120deg,#102541,#0b1b32);
   border: 1px solid rgba(56,211,159,.2);
   border-radius: 16px;
   padding: 40px;
@@ -322,11 +348,11 @@ section {
   color: #b7c5d5;
 }
 
-/* NEDEN BİZ */
+/* WHY US */
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 20px;
 }
 
@@ -346,7 +372,7 @@ section {
   font-size: 14px;
 }
 
-/* İLETİŞİM */
+/* CONTACT */
 
 .contact {
   background: var(--navy);
@@ -399,12 +425,12 @@ footer strong {
   box-shadow: 0 5px 20px rgba(0,0,0,.3);
 }
 
-/* MOBİL TASARIM */
+/* MOBILE */
 
-@media(max-width: 850px) {
-
+@media(max-width:850px) {
   .menu-toggle {
     display: block;
+    cursor: pointer;
   }
 
   .nav-links {
@@ -432,7 +458,6 @@ footer strong {
 
   .hero {
     min-height: 600px;
-    background-attachment: scroll;
   }
 
   section {
@@ -448,8 +473,7 @@ footer strong {
   }
 }
 
-@media(max-width: 480px) {
-
+@media(max-width:480px) {
   .brand-logo {
     gap: 7px;
   }
@@ -494,7 +518,6 @@ footer strong {
     font-size: 13px;
   }
 }
-
 </style>
 </head>
 
@@ -503,322 +526,260 @@ footer strong {
 <!-- HEADER -->
 
 <header>
-  <div class="container navbar">
+<div class="container navbar">
 
-    <a href="#anasayfa" class="brand-logo">
+<a href="#anasayfa" class="brand-logo">
 
-      <svg viewBox="0 0 90 75" aria-hidden="true">
+<svg viewBox="0 0 90 75" aria-hidden="true">
+<path d="M45 4 L84 68 H6 Z"
+fill="none" stroke="#ffffff" stroke-width="7"
+stroke-linejoin="round"/>
 
-        <path d="M45 4 L84 68 H6 Z"
-          fill="none"
-          stroke="#ffffff"
-          stroke-width="7"
-          stroke-linejoin="round"/>
+<path d="M8 63 Q35 37 84 30"
+fill="none" stroke="#38d39f" stroke-width="7"/>
 
-        <path d="M8 63 Q35 37 84 30"
-          fill="none"
-          stroke="#38d39f"
-          stroke-width="7"/>
+<path d="M30 52 L60 52 L70 65 H21 Z"
+fill="#ffffff"/>
 
-        <path d="M30 52 L60 52 L70 65 H21 Z"
-          fill="#ffffff"/>
+<path d="M36 53 V64 M49 53 V64 M24 59 H67"
+stroke="#071a33" stroke-width="3"/>
+</svg>
 
-        <path d="M36 53 V64 M49 53 V64 M24 59 H67"
-          stroke="#071a33"
-          stroke-width="3"/>
+<span>
+<strong>AYAZ <b>GROUP</b></strong>
+<small>YENİLENEBİLİR ENERJİ</small>
+</span>
 
-      </svg>
+</a>
 
-      <span>
-        <strong>AYAZ <b>GROUP</b></strong>
-        <small>YENİLENEBİLİR ENERJİ</small>
-      </span>
+<button class="menu-toggle"
+onclick="toggleMenu()"
+aria-label="Menüyü aç veya kapat"
+aria-expanded="false">
+☰
+</button>
 
-    </a>
+<nav class="nav-links" id="navLinks">
+<a href="#anasayfa" onclick="closeMenu()">Ana Sayfa</a>
+<a href="#kurumsal" onclick="closeMenu()">Kurumsal</a>
+<a href="#hizmetler" onclick="closeMenu()">Hizmetlerimiz</a>
+<a href="#projeler" onclick="closeMenu()">Projeler</a>
+<a href="#neden-biz" onclick="closeMenu()">Neden Biz?</a>
+<a href="#iletisim" onclick="closeMenu()">İletişim</a>
+</nav>
 
-    <button class="menu-toggle"
-      onclick="toggleMenu()"
-      aria-label="Menüyü aç veya kapat"
-      aria-expanded="false">
-      ☰
-    </button>
-
-    <nav class="nav-links" id="navLinks">
-
-      <a href="#anasayfa" onclick="closeMenu()">Ana Sayfa</a>
-      <a href="#kurumsal" onclick="closeMenu()">Kurumsal</a>
-      <a href="#hizmetler" onclick="closeMenu()">Hizmetlerimiz</a>
-      <a href="#projeler" onclick="closeMenu()">Projeler</a>
-      <a href="#neden-biz" onclick="closeMenu()">Neden Biz?</a>
-      <a href="#iletisim" onclick="closeMenu()">İletişim</a>
-
-    </nav>
-
-  </div>
+</div>
 </header>
 
 <main>
 
-<!-- ANA SAYFA -->
+<!-- HERO -->
 
 <div class="hero" id="anasayfa">
+<div class="container">
 
-  <div class="container">
+<div class="hero-content">
 
-    <div class="hero-content">
-
-      <div class="hero-badge">
-        YENİLENEBİLİR ENERJİ ÇÖZÜMLERİ
-      </div>
-
-      <h1>
-        Enerjinin Gücüyle
-        <span>Geleceği Şekillendirin</span>
-      </h1>
-
-      <p>
-        AYAZ GROUP olarak çatı GES, arazi GES ve enerji
-        depolama alanlarında yenilikçi, güvenilir ve
-        sürdürülebilir enerji çözümleri sunmayı hedefliyoruz.
-      </p>
-
-      <div class="buttons">
-
-        <a href="#iletisim" class="btn btn-primary">
-          Bizimle İletişime Geçin
-        </a>
-
-        <a href="#hizmetler" class="btn btn-secondary">
-          Çözümlerimizi İnceleyin
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
+<div class="hero-badge">
+YENİLENEBİLİR ENERJİ ÇÖZÜMLERİ
 </div>
 
-<!-- KURUMSAL -->
+<h1>
+Enerjinin Gücüyle
+<span>Geleceği Şekillendirin</span>
+</h1>
+
+<p>
+AYAZ GROUP olarak çatı GES, arazi GES ve enerji
+depolama alanlarında yenilikçi, güvenilir ve
+sürdürülebilir enerji çözümleri sunmayı hedefliyoruz.
+</p>
+
+<div class="buttons">
+<a href="#iletisim" class="btn btn-primary">
+Bizimle İletişime Geçin
+</a>
+
+<a href="#hizmetler" class="btn btn-secondary">
+Çözümlerimizi İnceleyin
+</a>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- ABOUT -->
 
 <section class="about" id="kurumsal">
+<div class="container">
 
-  <div class="container">
+<div class="section-title">
+<span>HAKKIMIZDA</span>
+<h2>AYAZ GROUP</h2>
+<p>Enerjide sürdürülebilir bir gelecek için.</p>
+</div>
 
-    <div class="section-title">
+<div class="about-content">
+<p>
+AYAZ GROUP, yenilenebilir enerji sektöründe
+çözümler geliştirmeyi hedefleyen bir markadır.
+Güneş enerjisi sistemleri, enerji depolama ve
+teknik hizmetler alanlarında verimlilik,
+kalite ve güven odaklı bir yaklaşım benimser.
+</p>
 
-      <span>HAKKIMIZDA</span>
-      <h2>AYAZ GROUP</h2>
-      <p>Enerjide sürdürülebilir bir gelecek için.</p>
+<p>
+Amacımız, bireysel ve kurumsal müşteriler için
+doğru projelendirme ve kaliteli uygulama
+anlayışıyla enerji dönüşümüne katkı sağlamaktır.
+</p>
+</div>
 
-    </div>
-
-    <div class="about-content">
-
-      <p>
-        AYAZ GROUP, yenilenebilir enerji sektöründe
-        çözümler geliştirmeyi hedefleyen bir markadır.
-        Güneş enerjisi sistemleri, enerji depolama ve
-        teknik hizmetler alanlarında verimlilik,
-        kalite ve güven odaklı bir yaklaşım benimser.
-      </p>
-
-      <p>
-        Amacımız, bireysel ve kurumsal müşteriler için
-        doğru projelendirme ve kaliteli uygulama
-        anlayışıyla enerji dönüşümüne katkı sağlamaktır.
-      </p>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
-<!-- HİZMETLER -->
+<!-- SERVICES -->
 
 <section id="hizmetler">
+<div class="container">
 
-  <div class="container">
+<div class="section-title">
+<span>ÇÖZÜMLERİMİZ</span>
+<h2>Hizmetlerimiz</h2>
+<p>İhtiyaca uygun yenilenebilir enerji çözümleri.</p>
+</div>
 
-    <div class="section-title">
+<div class="services-grid">
 
-      <span>ÇÖZÜMLERİMİZ</span>
-      <h2>Hizmetlerimiz</h2>
-      <p>İhtiyaca uygun yenilenebilir enerji çözümleri.</p>
+<div class="card">
+<div class="card-icon">☀️</div>
+<h3>Çatı GES</h3>
+<p>Fabrika, işletme ve ticari yapılar için güneş enerjisi sistemleri.</p>
+</div>
 
-    </div>
+<div class="card">
+<div class="card-icon">🌞</div>
+<h3>Arazi GES</h3>
+<p>Arazi tipi güneş enerjisi projeleri için planlama ve uygulama çözümleri.</p>
+</div>
 
-    <div class="services-grid">
+<div class="card">
+<div class="card-icon">🔋</div>
+<h3>Enerji Depolama</h3>
+<p>Batarya sistemleri ve enerji depolama çözümleri.</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">☀️</div>
-        <h3>Çatı GES</h3>
-        <p>
-          Fabrika, işletme ve ticari yapılar için
-          güneş enerjisi sistemleri.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">⚙️</div>
+<h3>Teknik Destek</h3>
+<p>Güneş enerjisi sistemlerinde kontrol, bakım ve teknik destek hizmetleri.</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">🌞</div>
-        <h3>Arazi GES</h3>
-        <p>
-          Arazi tipi güneş enerjisi projeleri için
-          planlama ve uygulama çözümleri.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">📐</div>
+<h3>Projelendirme</h3>
+<p>İhtiyaca uygun sistem tasarımı ve teknik proje planlaması.</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">🔋</div>
-        <h3>Enerji Depolama</h3>
-        <p>
-          Batarya sistemleri ve enerji depolama
-          çözümleri.
-        </p>
-      </div>
+<div class="card">
+<div class="card-icon">🤝</div>
+<h3>Enerji Danışmanlığı</h3>
+<p>Enerji yatırımları için çözüm odaklı danışmanlık ve yönlendirme.</p>
+</div>
 
-      <div class="card">
-        <div class="card-icon">⚙️</div>
-        <h3>Teknik Destek</h3>
-        <p>
-          Güneş enerjisi sistemlerinde kontrol,
-          bakım ve teknik destek hizmetleri.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">📐</div>
-        <h3>Projelendirme</h3>
-        <p>
-          İhtiyaca uygun sistem tasarımı ve
-          teknik proje planlaması.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🤝</div>
-        <h3>Enerji Danışmanlığı</h3>
-        <p>
-          Enerji yatırımları için çözüm odaklı
-          danışmanlık ve yönlendirme.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
-<!-- PROJELER -->
+<!-- PROJECTS -->
 
 <section class="projects" id="projeler">
+<div class="container">
 
-  <div class="container">
+<div class="section-title">
+<span>ÇALIŞMALARIMIZ</span>
+<h2>GES Projeleri</h2>
+<p>Enerji yatırımlarına değer katan çözümler.</p>
+</div>
 
-    <div class="section-title">
+<div class="project-box">
+<h3>Projelerimizle Tanışın</h3>
+<p>
+Tamamlanan projelerimizi, saha çalışmalarımızı
+ve teknik uygulamalarımızı bu alanda paylaşacağız.
+</p>
+</div>
 
-      <span>ÇALIŞMALARIMIZ</span>
-      <h2>GES Projeleri</h2>
-      <p>Enerji yatırımlarına değer katan çözümler.</p>
-
-    </div>
-
-    <div class="project-box">
-
-      <h3>Projelerimizle Tanışın</h3>
-
-      <p>
-        Tamamlanan projelerimizi, saha çalışmalarımızı
-        ve teknik uygulamalarımızı bu alanda paylaşacağız.
-      </p>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
-<!-- NEDEN BİZ -->
+<!-- WHY US -->
 
 <section id="neden-biz">
+<div class="container">
 
-  <div class="container">
+<div class="section-title">
+<span>AYAZ GROUP FARKI</span>
+<h2>Neden Biz?</h2>
+<p>Güven, kalite ve sürdürülebilirlik odaklı yaklaşım.</p>
+</div>
 
-    <div class="section-title">
+<div class="why-grid">
 
-      <span>AYAZ GROUP FARKI</span>
-      <h2>Neden Biz?</h2>
-      <p>Güven, kalite ve sürdürülebilirlik odaklı yaklaşım.</p>
+<div class="why-item">
+<h3>Kalite Odaklılık</h3>
+<p>Her aşamada doğru ürün ve uygulama anlayışı.</p>
+</div>
 
-    </div>
+<div class="why-item">
+<h3>Teknik Yaklaşım</h3>
+<p>İhtiyaca uygun sistem ve çözüm planlaması.</p>
+</div>
 
-    <div class="why-grid">
+<div class="why-item">
+<h3>Sürdürülebilirlik</h3>
+<p>Temiz enerji ve verimli kaynak kullanımı.</p>
+</div>
 
-      <div class="why-item">
-        <h3>Kalite Odaklılık</h3>
-        <p>Her aşamada doğru ürün ve uygulama anlayışı.</p>
-      </div>
-
-      <div class="why-item">
-        <h3>Teknik Yaklaşım</h3>
-        <p>İhtiyaca uygun sistem ve çözüm planlaması.</p>
-      </div>
-
-      <div class="why-item">
-        <h3>Sürdürülebilirlik</h3>
-        <p>Temiz enerji ve verimli kaynak kullanımı.</p>
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
-<!-- İLETİŞİM -->
+<!-- CONTACT -->
 
 <section class="contact" id="iletisim">
+<div class="container">
 
-  <div class="container">
+<div class="section-title">
+<span>BİZİMLE İLETİŞİME GEÇİN</span>
+<h2>Enerji Yatırımınızı Konuşalım</h2>
+</div>
 
-    <div class="section-title">
+<div class="contact-content">
+<p>
+GES projeleri, enerji depolama ve teknik hizmetler
+hakkında bilgi almak için bizimle iletişime geçebilirsiniz.
+</p>
 
-      <span>BİZİMLE İLETİŞİME GEÇİN</span>
-      <h2>Enerji Yatırımınızı Konuşalım</h2>
+<div class="contact-buttons">
 
-    </div>
+<a href="https://wa.me/905XXXXXXXXX"
+class="btn btn-primary"
+target="_blank"
+rel="noopener">
+WhatsApp'tan Ulaş
+</a>
 
-    <div class="contact-content">
+<a href="mailto:iletisim@ayazgroup.com"
+class="btn btn-secondary">
+E-posta Gönder
+</a>
 
-      <p>
-        GES projeleri, enerji depolama ve teknik
-        hizmetler hakkında bilgi almak için
-        bizimle iletişime geçebilirsiniz.
-      </p>
+</div>
+</div>
 
-      <div class="contact-buttons">
-
-        <a href="https://wa.me/905XXXXXXXXX"
-           class="btn btn-primary"
-           target="_blank"
-           rel="noopener">
-          WhatsApp'tan Ulaş
-        </a>
-
-        <a href="mailto:iletisim@ayazgroup.com"
-           class="btn btn-secondary">
-          E-posta Gönder
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 </main>
@@ -826,34 +787,22 @@ footer strong {
 <!-- FOOTER -->
 
 <footer>
-
-  <p>
-    © 2026 <strong>AYAZ GROUP</strong>.
-    Tüm Hakları Saklıdır.
-  </p>
-
-  <p>Geleceğe Güç Katıyoruz.</p>
-
+<p>© 2026 <strong>AYAZ GROUP</strong>. Tüm Hakları Saklıdır.</p>
+<p>Geleceğe Güç Katıyoruz.</p>
 </footer>
 
-<!-- WHATSAPP SABİT BUTON -->
+<!-- WHATSAPP -->
 
 <a href="https://wa.me/905XXXXXXXXX"
-   class="whatsapp"
-   target="_blank"
-   rel="noopener"
-   aria-label="WhatsApp üzerinden iletişim">
-
-  WhatsApp
-
+class="whatsapp"
+target="_blank"
+rel="noopener"
+aria-label="WhatsApp üzerinden iletişim">
+WhatsApp
 </a>
 
-<!-- MOBİL MENÜ JAVASCRIPT -->
-
 <script>
-
 function toggleMenu() {
-
   const menu = document.getElementById("navLinks");
   const button = document.querySelector(".menu-toggle");
 
@@ -863,20 +812,16 @@ function toggleMenu() {
     "aria-expanded",
     menu.classList.contains("active")
   );
-
 }
 
 function closeMenu() {
-
   document.getElementById("navLinks").classList.remove("active");
 
   document.querySelector(".menu-toggle").setAttribute(
     "aria-expanded",
     "false"
   );
-
 }
-
 </script>
 
 </body>
