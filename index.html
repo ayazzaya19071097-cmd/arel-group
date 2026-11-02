@@ -3,185 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AYAZ GROUP | Güneş Enerjisi ve GES Çözümleri</title>
-<meta name="description" content="AYAZ GROUP, Bursa ve çevresinde güneş enerjisi sistemleri, GES projeleri ve enerji depolama çözümleri sunar.">
-<meta name="theme-color" content="#0d2b45">
+<title>AYAZ GROUP | Geleceğin Güneş Enerjisi Çözümleri</title>
+<meta name="description" content="AYAZ GROUP, Bursa ve çevresinde endüstriyel ve bireysel güneş enerjisi (GES) çözümleri sunar.">
+<meta name="theme-color" content="#030b1e">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --blue-dark:#0a192f;
-  --blue-main:#16466a;
-  --blue-light:#20639b;
-  --cyan-accent:#00d2ff;
-  --light-bg:#f4f8fb;
-  --text-dark:#18364c;
-  --text-muted:#607789;
-  --white:#ffffff;
+:root {
+  --bg-dark: #030b1e;
+  --card-bg: rgba(10, 25, 50, 0.65);
+  --accent-cyan: #00f2ff;
+  --accent-blue: #0066ff;
+  --text-main: #f0f6fc;
+  --text-dim: #94a3b8;
+  --glass-border: rgba(0, 242, 255, 0.15);
 }
 
-*{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth; scroll-padding-top:80px;}
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:var(--text-dark);
-  background:var(--light-bg);
-  line-height:1.65;
-}
-a{text-decoration:none; color:inherit;}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-family: 'Plus Jakarta Sans', sans-serif; }
 
-/* HEADER & NAV */
-header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow:0 4px 20px rgba(10, 25, 47, 0.08);
-}
-.nav{
-  max-width:1200px;
-  margin:auto;
-  padding:16px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.logo{
-  font-size:26px;
-  font-weight:900;
-  letter-spacing:1px;
-  color:var(--blue-main);
-}
-.logo span{color:var(--cyan-accent);}
-nav{display:flex; gap:24px; font-size:15px; font-weight:600;}
-nav a{transition:color 0.3s;}
-nav a:hover{color:var(--cyan-accent);}
-
-/* HERO SECTION (GÜNEŞ PANELİ ARKA PLAN) */
-.hero{
-  min-height:85vh;
-  position:relative;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  /* Şık ve yüksek kaliteli güneş paneli arka planı */
-  background: url('https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed;
-  color:var(--white);
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Şık Mavi Radyal & Doğrusal Gradyan Katmanı */
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(135deg, rgba(10, 25, 47, 0.92) 0%, rgba(22, 70, 106, 0.8) 60%, rgba(0, 210, 255, 0.3) 100%);
-  z-index:1;
+/* GÜNEŞ PANELİ ARKA PLAN & CANLI OVERLAY */
+.hero-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url('https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat fixed;
 }
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:1200px;
-  margin:auto;
-  padding:80px 24px;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(0, 242, 255, 0.15) 0%, transparent 40%),
+    linear-gradient(180deg, rgba(3, 11, 30, 0.85) 0%, rgba(3, 11, 30, 0.95) 100%);
+  z-index: 1;
 }
-.eyebrow{
-  font-size:14px;
-  letter-spacing:3px;
-  font-weight:700;
-  text-transform:uppercase;
-  color:var(--cyan-accent);
-  margin-bottom:12px;
+
+/* NAVBAR */
+header {
+  position: relative;
+  z-index: 10;
+  padding: 24px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
-h1{
-  font-size:clamp(36px, 5.5vw, 64px);
-  line-height:1.15;
-  margin-bottom:20px;
-  max-width:800px;
-  font-weight:800;
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
 }
-h1 span{
-  background: linear-gradient(120deg, #ffffff, var(--cyan-accent));
+
+.logo span {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 12px rgba(0, 242, 255, 0.6);
+}
+
+nav { display: flex; gap: 32px; }
+nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 8px var(--accent-cyan);
+}
+
+/* HERO İÇERİK */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 8%;
+  width: 100%;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 242, 255, 0.1);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  color: var(--accent-cyan);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  max-width: 850px;
+}
+
+h1 .highlight {
+  background: linear-gradient(135deg, #fff 30%, var(--accent-cyan) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero p{
-  font-size:18px;
-  max-width:620px;
-  color:#d0e4f5;
-  margin-bottom:32px;
-}
-.actions{display:flex; gap:16px; flex-wrap:wrap;}
-.btn{
-  display:inline-block;
-  border-radius:8px;
-  padding:14px 28px;
-  font-weight:700;
-  font-size:15px;
-  transition:all 0.3s ease;
-  cursor:pointer;
-}
-.btn-primary{
-  background:var(--cyan-accent);
-  color:var(--blue-dark);
-  box-shadow:0 4px 15px rgba(0, 210, 255, 0.3);
-}
-.btn-primary:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 20px rgba(0, 210, 255, 0.5);
-}
-.btn-secondary{
-  border:2px solid rgba(255, 255, 255, 0.4);
-  color:var(--white);
-}
-.btn-secondary:hover{
-  background:rgba(255, 255, 255, 0.1);
-  border-color:var(--white);
+
+.hero-content p {
+  font-size: 18px;
+  color: var(--text-dim);
+  max-width: 600px;
+  margin-bottom: 40px;
 }
 
-/* ÖZELLİKLER BÖLÜMÜ (SADE MAVİ KARTLAR) */
-.features{
-  max-width:1200px;
-  margin:-50px auto 80px;
-  padding:0 24px;
-  position:relative;
-  z-index:3;
-  display:grid;
+.btn-group { display: flex; gap: 20px; flex-wrap: wrap; }
+
+.btn {
+  padding: 16px 36px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-main {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  color: #000;
+  box-shadow: 0 0 25px rgba(0, 242, 255, 0.4);
+}
+
+.btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(0, 242, 255, 0.7);
+}
+
+.btn-outline {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #fff;
+}
+
+/* CAM KARTLAR (GLASSMORPHISM FEATURES) */
+.features-section {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 8%;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap:24px;
+  gap: 24px;
+  width: 100%;
 }
-.card{
-  background:var(--white);
-  padding:32px 24px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(10, 25, 47, 0.05);
-  border:1px solid #e1eaf0;
-  transition:transform 0.3s ease;
+
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  padding: 32px;
+  border-radius: 16px;
+  transition: all 0.4s ease;
 }
-.card:hover{transform:translateY(-5px);}
-.card h3{color:var(--blue-main); margin-bottom:12px; font-size:20px;}
-.card p{color:var(--text-muted); font-size:14px; line-height:1.6;}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 10px 30px rgba(0, 242, 255, 0.2);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 242, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.card p {
+  color: var(--text-dim);
+  font-size: 14px;
+}
 
 /* FOOTER */
-footer{
-  background:var(--blue-dark);
-  color:#8892b0;
-  text-align:center;
-  padding:30px 24px;
-  font-size:14px;
+footer {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+  font-size: 14px;
 }
 
-@media(max-width:768px){
-  nav{display:none;}
-  .hero{min-height:70vh;}
+@media (max-width: 768px) {
+  nav { display: none; }
+  h1 { font-size: 36px; }
+  .btn-group { flex-direction: column; }
 }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="nav">
+<div class="hero-wrapper">
+  <div class="hero-overlay"></div>
+
+  <header>
     <div class="logo">AYAZ<span>GROUP</span></div>
     <nav>
       <a href="#kurumsal">Kurumsal</a>
@@ -189,39 +257,41 @@ footer{
       <a href="#projeler">GES Projeleri</a>
       <a href="#iletisim">İletişim</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <div class="eyebrow">Yenilenebilir Enerji Çözümleri</div>
-    <h1>Güneşin Gücüyle <span>Geleceği Aydınlatıyoruz</span></h1>
-    <p>AYAZ GROUP olarak Bursa ve çevresinde endüstriyel ve bireysel çatı GES sistemleri, arazi projeleri ve enerji depolama çözümleri sunuyoruz.</p>
-    <div class="actions">
-      <a href="#iletisim" class="btn btn-primary">Ücretsiz Keşif İste</a>
-      <a href="#hizmetler" class="btn btn-secondary">Projelerimizi İncele</a>
+  <main class="hero-content">
+    <div class="badge">⚡ Yenilenebilir Enerji Çözümleri</div>
+    <h1>Güneşin Gücüyle <br><span class="highlight">Geleceği Şekillendirin</span></h1>
+    <p>AYAZ GROUP olarak endüstriyel çatılardan arazi santrallerine kadar yüksek verimli GES projeleri ve akıllı depolama sistemleri sunuyoruz.</p>
+    
+    <div class="btn-group">
+      <a href="#iletisim" class="btn btn-main">Ücretsiz Keşif Başlat</a>
+      <a href="#hizmetler" class="btn btn-outline">Çözümlerimizi İncele</a>
     </div>
-  </div>
-</section>
+  </main>
 
-<section class="features">
-  <div class="card">
-    <h3>Çatı GES Sistemleri</h3>
-    <p>Fabrika ve konut çatılarına özel yüksek verimli güneş paneli kurulumları.</p>
-  </div>
-  <div class="card">
-    <h3>Arazi GES Projeleri</h3>
-    <p>Anahtar teslim arazi tipi güneş santrali kurulumu ve mühendislik hizmetleri.</p>
-  </div>
-  <div class="card">
-    <h3>Bakım & İşletme</h3>
-    <p>Mevcut santralleriniz için maksimum performans ve kesintisiz izleme desteği.</p>
-  </div>
-</section>
+  <section class="features-section">
+    <div class="card">
+      <div class="card-icon">☀️</div>
+      <h3>Çatı GES Projeleri</h3>
+      <p>Fabrika ve ticari binalar için öz tüketim odaklı maksimum verimlilik sağlayan çatı GES kurulumları.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">⚡</div>
+      <h3>Arazi Santralleri</h3>
+      <p>Yüksek kapasiteli arazi tipi güneş santrallerinde mühendislik, tedarik ve anahtar teslim kurulum.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔋</div>
+      <h3>Enerji Depolama</h3>
+      <p>Kesintisiz güç ve gece kullanımı için yeni nesil endüstriyel batarya depolama çözümleri.</p>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2026 AYAZ GROUP. Tüm Hakları Saklıdır.</p>
-</footer>
+  <footer>
+    &copy; 2026 AYAZ GROUP. Tüm Hakları Saklıdır.
+  </footer>
+</div>
 
 </body>
 </html>
