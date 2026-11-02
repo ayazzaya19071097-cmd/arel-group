@@ -9,6 +9,7 @@
 
 <meta name="description" content="AYAZ GROUP, Bursa ve çevresinde çatı GES, arazi GES, enerji depolama ve yenilenebilir enerji çözümleri sunar.">
 
+<meta name="keywords" content="AYAZ GROUP, GES, güneş enerjisi, yenilenebilir enerji, Bursa GES, enerji depolama">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#071a33">
 
@@ -17,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 :root {
   --navy: #071a33;
   --dark: #030d1d;
@@ -34,7 +36,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+  scroll-padding-top: 95px;
 }
 
 body {
@@ -56,13 +58,13 @@ a {
   margin: auto;
 }
 
-/* HEADER */
+/* LOGO VE HEADER */
 
 header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(7,26,51,0.96);
+  background: rgba(7,26,51,0.97);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -72,26 +74,51 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
-.logo {
-  font-size: 26px;
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand-logo svg {
+  width: 58px;
+  height: 52px;
+}
+
+.brand-logo strong {
+  display: block;
+  color: white;
+  font-size: 23px;
   font-weight: 800;
   letter-spacing: 1px;
+  line-height: 1.2;
 }
 
-.logo span {
+.brand-logo strong b {
   color: var(--green);
+}
+
+.brand-logo small {
+  display: block;
+  color: var(--gray);
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 4px;
 }
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  gap: 25px;
   align-items: center;
 }
 
 .nav-links a {
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 600;
   color: #d0d8e5;
   transition: .3s;
 }
@@ -105,7 +132,7 @@ header {
   background: none;
   border: 1px solid var(--green);
   color: white;
-  padding: 8px 12px;
+  padding: 8px 13px;
   border-radius: 8px;
   font-size: 22px;
   cursor: pointer;
@@ -114,12 +141,12 @@ header {
 /* HERO */
 
 .hero {
-  min-height: 690px;
+  min-height: 680px;
   display: flex;
   align-items: center;
   position: relative;
   background:
-    linear-gradient(90deg, rgba(3,13,29,.97), rgba(3,13,29,.62)),
+    linear-gradient(90deg, rgba(3,13,29,.97), rgba(3,13,29,.55)),
     url('https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=2000&auto=format&fit=crop')
     center/cover no-repeat;
 }
@@ -143,6 +170,7 @@ header {
   font-size: clamp(38px, 6vw, 68px);
   line-height: 1.15;
   margin-bottom: 25px;
+  font-weight: 800;
 }
 
 .hero h1 span {
@@ -190,7 +218,7 @@ header {
   color: var(--green);
 }
 
-/* GENERAL SECTIONS */
+/* GENEL BÖLÜMLER */
 
 section {
   padding: 90px 0;
@@ -217,7 +245,7 @@ section {
   color: var(--gray);
 }
 
-/* CORPORATE */
+/* HAKKIMIZDA */
 
 .about {
   background: var(--navy);
@@ -234,7 +262,7 @@ section {
   margin-top: 18px;
 }
 
-/* SERVICES */
+/* HİZMETLER */
 
 .services-grid {
   display: grid;
@@ -270,7 +298,7 @@ section {
   font-size: 14px;
 }
 
-/* PROJECTS */
+/* PROJELER */
 
 .projects {
   background: var(--navy);
@@ -294,7 +322,7 @@ section {
   color: #b7c5d5;
 }
 
-/* WHY US */
+/* NEDEN BİZ */
 
 .why-grid {
   display: grid;
@@ -318,7 +346,7 @@ section {
   font-size: 14px;
 }
 
-/* CONTACT */
+/* İLETİŞİM */
 
 .contact {
   background: var(--navy);
@@ -364,16 +392,17 @@ footer strong {
   right: 22px;
   z-index: 200;
   background: #25d366;
-  color: #fff;
+  color: white;
   padding: 13px 19px;
   border-radius: 40px;
   font-weight: 700;
   box-shadow: 0 5px 20px rgba(0,0,0,.3);
 }
 
-/* MOBILE */
+/* MOBİL TASARIM */
 
 @media(max-width: 850px) {
+
   .menu-toggle {
     display: block;
   }
@@ -420,8 +449,23 @@ footer strong {
 }
 
 @media(max-width: 480px) {
-  .logo {
-    font-size: 22px;
+
+  .brand-logo {
+    gap: 7px;
+  }
+
+  .brand-logo svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-logo strong {
+    font-size: 19px;
+  }
+
+  .brand-logo small {
+    font-size: 7px;
+    letter-spacing: 1px;
   }
 
   .hero h1 {
@@ -450,16 +494,46 @@ footer strong {
     font-size: 13px;
   }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
   <div class="container navbar">
 
-    <a href="#anasayfa" class="logo">
-      AYAZ <span>GROUP</span>
+    <a href="#anasayfa" class="brand-logo">
+
+      <svg viewBox="0 0 90 75" aria-hidden="true">
+
+        <path d="M45 4 L84 68 H6 Z"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="7"
+          stroke-linejoin="round"/>
+
+        <path d="M8 63 Q35 37 84 30"
+          fill="none"
+          stroke="#38d39f"
+          stroke-width="7"/>
+
+        <path d="M30 52 L60 52 L70 65 H21 Z"
+          fill="#ffffff"/>
+
+        <path d="M36 53 V64 M49 53 V64 M24 59 H67"
+          stroke="#071a33"
+          stroke-width="3"/>
+
+      </svg>
+
+      <span>
+        <strong>AYAZ <b>GROUP</b></strong>
+        <small>YENİLENEBİLİR ENERJİ</small>
+      </span>
+
     </a>
 
     <button class="menu-toggle"
@@ -470,11 +544,14 @@ footer strong {
     </button>
 
     <nav class="nav-links" id="navLinks">
+
       <a href="#anasayfa" onclick="closeMenu()">Ana Sayfa</a>
       <a href="#kurumsal" onclick="closeMenu()">Kurumsal</a>
       <a href="#hizmetler" onclick="closeMenu()">Hizmetlerimiz</a>
       <a href="#projeler" onclick="closeMenu()">Projeler</a>
+      <a href="#neden-biz" onclick="closeMenu()">Neden Biz?</a>
       <a href="#iletisim" onclick="closeMenu()">İletişim</a>
+
     </nav>
 
   </div>
@@ -485,7 +562,9 @@ footer strong {
 <!-- ANA SAYFA -->
 
 <div class="hero" id="anasayfa">
+
   <div class="container">
+
     <div class="hero-content">
 
       <div class="hero-badge">
@@ -504,6 +583,7 @@ footer strong {
       </p>
 
       <div class="buttons">
+
         <a href="#iletisim" class="btn btn-primary">
           Bizimle İletişime Geçin
         </a>
@@ -511,24 +591,31 @@ footer strong {
         <a href="#hizmetler" class="btn btn-secondary">
           Çözümlerimizi İnceleyin
         </a>
+
       </div>
 
     </div>
+
   </div>
+
 </div>
 
 <!-- KURUMSAL -->
 
 <section class="about" id="kurumsal">
+
   <div class="container">
 
     <div class="section-title">
+
       <span>HAKKIMIZDA</span>
       <h2>AYAZ GROUP</h2>
       <p>Enerjide sürdürülebilir bir gelecek için.</p>
+
     </div>
 
     <div class="about-content">
+
       <p>
         AYAZ GROUP, yenilenebilir enerji sektöründe
         çözümler geliştirmeyi hedefleyen bir markadır.
@@ -542,20 +629,25 @@ footer strong {
         doğru projelendirme ve kaliteli uygulama
         anlayışıyla enerji dönüşümüne katkı sağlamaktır.
       </p>
+
     </div>
 
   </div>
+
 </section>
 
 <!-- HİZMETLER -->
 
 <section id="hizmetler">
+
   <div class="container">
 
     <div class="section-title">
+
       <span>ÇÖZÜMLERİMİZ</span>
       <h2>Hizmetlerimiz</h2>
       <p>İhtiyaca uygun yenilenebilir enerji çözümleri.</p>
+
     </div>
 
     <div class="services-grid">
@@ -615,40 +707,52 @@ footer strong {
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- PROJELER -->
 
 <section class="projects" id="projeler">
+
   <div class="container">
 
     <div class="section-title">
+
       <span>ÇALIŞMALARIMIZ</span>
       <h2>GES Projeleri</h2>
       <p>Enerji yatırımlarına değer katan çözümler.</p>
+
     </div>
 
     <div class="project-box">
+
       <h3>Projelerimizle Tanışın</h3>
+
       <p>
         Tamamlanan projelerimizi, saha çalışmalarımızı
         ve teknik uygulamalarımızı bu alanda paylaşacağız.
       </p>
+
     </div>
 
   </div>
+
 </section>
 
 <!-- NEDEN BİZ -->
 
 <section id="neden-biz">
+
   <div class="container">
 
     <div class="section-title">
+
       <span>AYAZ GROUP FARKI</span>
       <h2>Neden Biz?</h2>
       <p>Güven, kalite ve sürdürülebilirlik odaklı yaklaşım.</p>
+
     </div>
 
     <div class="why-grid">
@@ -669,20 +773,26 @@ footer strong {
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 <!-- İLETİŞİM -->
 
 <section class="contact" id="iletisim">
+
   <div class="container">
 
     <div class="section-title">
+
       <span>BİZİMLE İLETİŞİME GEÇİN</span>
       <h2>Enerji Yatırımınızı Konuşalım</h2>
+
     </div>
 
     <div class="contact-content">
+
       <p>
         GES projeleri, enerji depolama ve teknik
         hizmetler hakkında bilgi almak için
@@ -690,6 +800,7 @@ footer strong {
       </p>
 
       <div class="contact-buttons">
+
         <a href="https://wa.me/905XXXXXXXXX"
            class="btn btn-primary"
            target="_blank"
@@ -697,36 +808,52 @@ footer strong {
           WhatsApp'tan Ulaş
         </a>
 
-        <a href="mailto:yönetim@ayazgroup.com"
+        <a href="mailto:iletisim@ayazgroup.com"
            class="btn btn-secondary">
           E-posta Gönder
         </a>
+
       </div>
+
     </div>
 
   </div>
+
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
+
   <p>
     © 2026 <strong>AYAZ GROUP</strong>.
     Tüm Hakları Saklıdır.
   </p>
+
   <p>Geleceğe Güç Katıyoruz.</p>
+
 </footer>
 
-<a href="https://wa.me/905447157701
+<!-- WHATSAPP SABİT BUTON -->
+
+<a href="https://wa.me/905XXXXXXXXX"
    class="whatsapp"
    target="_blank"
    rel="noopener"
    aria-label="WhatsApp üzerinden iletişim">
+
   WhatsApp
+
 </a>
 
+<!-- MOBİL MENÜ JAVASCRIPT -->
+
 <script>
+
 function toggleMenu() {
+
   const menu = document.getElementById("navLinks");
   const button = document.querySelector(".menu-toggle");
 
@@ -736,15 +863,20 @@ function toggleMenu() {
     "aria-expanded",
     menu.classList.contains("active")
   );
+
 }
 
 function closeMenu() {
+
   document.getElementById("navLinks").classList.remove("active");
+
   document.querySelector(".menu-toggle").setAttribute(
     "aria-expanded",
     "false"
   );
+
 }
+
 </script>
 
 </body>
