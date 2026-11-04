@@ -4,11 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AYAZ GROUP | Yenilenebilir Enerji ve GES Çözümleri</title>
 <meta name="description" content="AYAZ GROUP - Çatı GES, arazi GES, güneş enerjisi sistemleri, enerji depolama ve teknik çözümler.">
 <meta name="theme-color" content="#071a33">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,490 +19,116 @@
 --gray:#a8b5c7;
 --card:#102541;
 }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--dark);color:white;font-family:'Plus Jakarta Sans',sans-serif;line-height:1.7;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{width:88%;max-width:1200px;margin:auto}
 
-* {
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+header{position:sticky;top:0;z-index:100;background:rgba(3,13,29,.97);border-bottom:1px solid rgba(255,255,255,.08)}
+.navbar{min-height:85px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-logo{font-size:35px;font-weight:800;color:var(--green)}
+.brand strong{font-size:23px;letter-spacing:1px}
+.brand strong span{color:var(--green)}
+.brand small{display:block;color:var(--gray);font-size:9px;letter-spacing:2px}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{font-size:13px;font-weight:600;color:#d0d8e5;transition:.3s}
+.nav-links a:hover{color:var(--green)}
+.menu-toggle{display:none;background:none;border:1px solid var(--green);color:white;padding:8px 13px;border-radius:8px;font-size:22px}
 
-html {
-scroll-behavior:smooth;
-scroll-padding-top:90px;
-}
-
-body {
-background:var(--dark);
-color:white;
-font-family:'Plus Jakarta Sans',sans-serif;
-line-height:1.7;
-overflow-x:hidden;
-}
-
-a {
-text-decoration:none;
-color:inherit;
-}
-
-.container {
-width:88%;
-max-width:1200px;
-margin:auto;
-}
-
-/* HEADER */
-
-header {
-position:sticky;
-top:0;
-z-index:100;
-background:rgba(3,13,29,.97);
-border-bottom:1px solid rgba(255,255,255,.08);
-}
-
-.navbar {
-min-height:85px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:15px;
-}
-
-.brand {
-display:flex;
-align-items:center;
-gap:12px;
-}
-
-.brand-logo {
-font-size:35px;
-font-weight:800;
-color:var(--green);
-}
-
-.brand strong {
-font-size:23px;
-letter-spacing:1px;
-}
-
-.brand strong span {
-color:var(--green);
-}
-
-.brand small {
-display:block;
-color:var(--gray);
-font-size:9px;
-letter-spacing:2px;
-}
-
-.nav-links {
-display:flex;
-gap:22px;
-align-items:center;
-}
-
-.nav-links a {
-font-size:13px;
-font-weight:600;
-color:#d0d8e5;
-transition:.3s;
-}
-
-.nav-links a:hover {
-color:var(--green);
-}
-
-.menu-toggle {
-display:none;
-background:none;
-border:1px solid var(--green);
-color:white;
-padding:8px 13px;
-border-radius:8px;
-font-size:22px;
-}
-
-/* HERO - FOTOĞRAFLI ARKA PLAN */
-
-.hero {
+/* FOTOĞRAFLI HERO ARKA PLAN */
+.hero{
 min-height:720px;
 display:flex;
 align-items:center;
 position:relative;
 overflow:hidden;
 isolation:isolate;
-
 background-color:#071a33;
-background-image:url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=85");
+background-image:
+linear-gradient(90deg,rgba(2,9,22,.68),rgba(3,18,37,.30)),
+url("IMG-20261104-WA0007.jpg");
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 }
+.hero-content{max-width:780px;padding:110px 0;position:relative;z-index:2}
+.hero-badge{display:inline-block;padding:8px 18px;border:1px solid rgba(56,211,159,.5);border-radius:30px;color:var(--green);font-size:12px;letter-spacing:1px;margin-bottom:25px;background:rgba(2,9,22,.35)}
+.hero h1{font-size:clamp(38px,6vw,68px);line-height:1.15;margin-bottom:25px;font-weight:800}
+.hero h1 span{color:var(--green)}
+.hero p{color:#f0f4f8;max-width:620px;font-size:17px;margin-bottom:35px}
+.buttons{display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 27px;border-radius:8px;font-weight:700;transition:.3s}
+.btn-primary{background:var(--green);color:var(--navy)}
+.btn-primary:hover{transform:translateY(-3px)}
+.btn-secondary{border:1px solid white;color:white;background:rgba(2,9,22,.25)}
+.btn-secondary:hover{border-color:var(--green);color:var(--green)}
 
-.hero::before {
-content:"";
-position:absolute;
-inset:0;
-z-index:-1;
-background:linear-gradient(
-90deg,
-rgba(2,9,22,.55) 0%,
-rgba(3,18,37,.30) 55%,
-rgba(3,18,37,.12) 100%
-);
+section{padding:90px 0}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title span{color:var(--green);font-size:13px;font-weight:700;letter-spacing:2px}
+.section-title h2{font-size:clamp(27px,4vw,40px);margin:10px 0}
+.section-title p{color:var(--gray)}
+.about,.projects,.contact{background:var(--navy)}
+.about-content{max-width:850px;margin:auto;text-align:center}
+.about-content p{color:#b7c5d5;margin-top:18px}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.08);padding:30px;border-radius:14px;transition:.3s}
+.card:hover{transform:translateY(-7px);border-color:var(--green)}
+.card-icon{font-size:35px;margin-bottom:17px}
+.card h3{font-size:19px;margin-bottom:12px}
+.card p{color:var(--gray);font-size:14px}
+
+.project-box{background:linear-gradient(120deg,#102541,#0b1b32);border:1px solid rgba(56,211,159,.2);border-radius:16px;padding:40px;text-align:center}
+.project-box h3{color:var(--green);font-size:23px;margin-bottom:12px}
+.project-box p{color:#b7c5d5}
+
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why-item{padding:25px;border-left:3px solid var(--green);background:rgba(255,255,255,.04)}
+.why-item h3{margin-bottom:8px}
+.why-item p{color:var(--gray);font-size:14px}
+
+.contact-content{max-width:750px;margin:auto;text-align:center}
+.contact-content p{color:var(--gray);margin:15px 0 28px}
+.contact-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+
+footer{background:#020916;text-align:center;padding:30px 15px;color:var(--gray);font-size:13px}
+footer strong{color:var(--green)}
+
+.whatsapp{position:fixed;bottom:22px;right:22px;z-index:200;background:#25d366;color:white;padding:13px 19px;border-radius:40px;font-weight:700;box-shadow:0 5px 20px rgba(0,0,0,.3)}
+
+@media(max-width:850px){
+.menu-toggle{display:block;cursor:pointer}
+.nav-links{display:none;position:absolute;top:85px;left:0;width:100%;padding:25px 6%;background:var(--navy);flex-direction:column;align-items:flex-start;gap:20px}
+.nav-links.active{display:flex}
+.services-grid,.why-grid{grid-template-columns:1fr}
+.hero{min-height:620px;background-position:60% center}
+section{padding:65px 0}
+.hero-content{padding:75px 0}
 }
-
-.hero-content {
-max-width:780px;
-padding:110px 0;
-position:relative;
-z-index:2;
-}
-
-.hero-badge {
-display:inline-block;
-padding:8px 18px;
-border:1px solid rgba(56,211,159,.5);
-border-radius:30px;
-color:var(--green);
-font-size:12px;
-letter-spacing:1px;
-margin-bottom:25px;
-background:rgba(2,9,22,.35);
-}
-
-.hero h1 {
-font-size:clamp(38px,6vw,68px);
-line-height:1.15;
-margin-bottom:25px;
-font-weight:800;
-}
-
-.hero h1 span {
-color:var(--green);
-}
-
-.hero p {
-color:#f0f4f8;
-max-width:620px;
-font-size:17px;
-margin-bottom:35px;
-}
-
-.buttons {
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn {
-display:inline-block;
-padding:14px 27px;
-border-radius:8px;
-font-weight:700;
-transition:.3s;
-}
-
-.btn-primary {
-background:var(--green);
-color:var(--navy);
-}
-
-.btn-primary:hover {
-transform:translateY(-3px);
-}
-
-.btn-secondary {
-border:1px solid white;
-color:white;
-background:rgba(2,9,22,.25);
-}
-
-.btn-secondary:hover {
-border-color:var(--green);
-color:var(--green);
-}
-
-/* GENEL */
-
-section {
-padding:90px 0;
-}
-
-.section-title {
-text-align:center;
-margin-bottom:50px;
-}
-
-.section-title span {
-color:var(--green);
-font-size:13px;
-font-weight:700;
-letter-spacing:2px;
-}
-
-.section-title h2 {
-font-size:clamp(27px,4vw,40px);
-margin:10px 0;
-}
-
-.section-title p {
-color:var(--gray);
-}
-
-/* HAKKIMIZDA */
-
-.about,.projects,.contact {
-background:var(--navy);
-}
-
-.about-content {
-max-width:850px;
-margin:auto;
-text-align:center;
-}
-
-.about-content p {
-color:#b7c5d5;
-margin-top:18px;
-}
-
-/* HİZMETLER */
-
-.services-grid {
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.card {
-background:var(--card);
-border:1px solid rgba(255,255,255,.08);
-padding:30px;
-border-radius:14px;
-transition:.3s;
-}
-
-.card:hover {
-transform:translateY(-7px);
-border-color:var(--green);
-}
-
-.card-icon {
-font-size:35px;
-margin-bottom:17px;
-}
-
-.card h3 {
-font-size:19px;
-margin-bottom:12px;
-}
-
-.card p {
-color:var(--gray);
-font-size:14px;
-}
-
-/* PROJELER */
-
-.project-box {
-background:linear-gradient(120deg,#102541,#0b1b32);
-border:1px solid rgba(56,211,159,.2);
-border-radius:16px;
-padding:40px;
-text-align:center;
-}
-
-.project-box h3 {
-color:var(--green);
-font-size:23px;
-margin-bottom:12px;
-}
-
-.project-box p {
-color:#b7c5d5;
-}
-
-/* NEDEN BİZ */
-
-.why-grid {
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-}
-
-.why-item {
-padding:25px;
-border-left:3px solid var(--green);
-background:rgba(255,255,255,.04);
-}
-
-.why-item h3 {
-margin-bottom:8px;
-}
-
-.why-item p {
-color:var(--gray);
-font-size:14px;
-}
-
-/* İLETİŞİM */
-
-.contact-content {
-max-width:750px;
-margin:auto;
-text-align:center;
-}
-
-.contact-content p {
-color:var(--gray);
-margin:15px 0 28px;
-}
-
-.contact-buttons {
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-/* FOOTER */
-
-footer {
-background:#020916;
-text-align:center;
-padding:30px 15px;
-color:var(--gray);
-font-size:13px;
-}
-
-footer strong {
-color:var(--green);
-}
-
-/* WHATSAPP */
-
-.whatsapp {
-position:fixed;
-bottom:22px;
-right:22px;
-z-index:200;
-background:#25d366;
-color:white;
-padding:13px 19px;
-border-radius:40px;
-font-weight:700;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-}
-
-/* MOBİL */
-
-@media(max-width:850px) {
-
-.menu-toggle {
-display:block;
-cursor:pointer;
-}
-
-.nav-links {
-display:none;
-position:absolute;
-top:85px;
-left:0;
-width:100%;
-padding:25px 6%;
-background:var(--navy);
-flex-direction:column;
-align-items:flex-start;
-gap:20px;
-}
-
-.nav-links.active {
-display:flex;
-}
-
-.services-grid,.why-grid {
-grid-template-columns:1fr;
-}
-
-.hero {
-min-height:620px;
-background-position:60% center;
-}
-
-.hero::before {
-background:linear-gradient(
-90deg,
-rgba(2,9,22,.48),
-rgba(3,18,37,.22)
-);
-}
-
-section {
-padding:65px 0;
-}
-
-.hero-content {
-padding:75px 0;
-}
-}
-
-@media(max-width:480px) {
-
-.brand-logo {
-font-size:28px;
-}
-
-.brand strong {
-font-size:19px;
-}
-
-.hero h1 {
-font-size:37px;
-}
-
-.hero p {
-font-size:15px;
-}
-
-.buttons {
-flex-direction:column;
-}
-
-.buttons .btn {
-text-align:center;
-}
-
-.project-box {
-padding:25px 18px;
-}
-
-.whatsapp {
-right:12px;
-bottom:12px;
-font-size:13px;
-}
-
+@media(max-width:480px){
+.brand-logo{font-size:28px}
+.brand strong{font-size:19px}
+.hero h1{font-size:37px}
+.hero p{font-size:15px}
+.buttons{flex-direction:column}
+.buttons .btn{text-align:center}
+.project-box{padding:25px 18px}
+.whatsapp{right:12px;bottom:12px;font-size:13px}
 }
 </style>
 </head>
 
 <body>
-
 <header>
 <div class="container navbar">
-
 <a href="#anasayfa" class="brand">
 <div class="brand-logo">▲</div>
-<div>
-<strong>AYAZ <span>GROUP</span></strong>
-<small>YENİLENEBİLİR ENERJİ</small>
-</div>
+<div><strong>AYAZ <span>GROUP</span></strong><small>YENİLENEBİLİR ENERJİ</small></div>
 </a>
-
 <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menüyü aç veya kapat" aria-expanded="false">☰</button>
-
 <nav class="nav-links" id="navLinks">
 <a href="#anasayfa" onclick="closeMenu()">Ana Sayfa</a>
 <a href="#kurumsal" onclick="closeMenu()">Kurumsal</a>
@@ -513,192 +137,91 @@ font-size:13px;
 <a href="#neden-biz" onclick="closeMenu()">Neden Biz?</a>
 <a href="#iletisim" onclick="closeMenu()">İletişim</a>
 </nav>
-
 </div>
 </header>
 
 <main>
-
 <div class="hero" id="anasayfa">
 <div class="container">
 <div class="hero-content">
-
-<div class="hero-badge">
-YENİLENEBİLİR ENERJİ ÇÖZÜMLERİ
-</div>
-
-<h1>
-Enerjinin Gücüyle
-<span>Geleceği Şekillendirin</span>
-</h1>
-
-<p>
-AYAZ GROUP olarak çatı GES, arazi GES ve enerji
-depolama alanlarında yenilikçi, güvenilir ve
-sürdürülebilir enerji çözümleri sunmayı hedefliyoruz.
-</p>
-
+<div class="hero-badge">YENİLENEBİLİR ENERJİ ÇÖZÜMLERİ</div>
+<h1>Enerjinin Gücüyle <span>Geleceği Şekillendirin</span></h1>
+<p>AYAZ GROUP olarak çatı GES, arazi GES ve enerji depolama alanlarında yenilikçi, güvenilir ve sürdürülebilir enerji çözümleri sunmayı hedefliyoruz.</p>
 <div class="buttons">
 <a href="#iletisim" class="btn btn-primary">Bizimle İletişime Geçin</a>
 <a href="#hizmetler" class="btn btn-secondary">Çözümlerimizi İnceleyin</a>
 </div>
-
 </div>
 </div>
 </div>
 
 <section class="about" id="kurumsal">
 <div class="container">
-
 <div class="section-title">
-<span>HAKKIMIZDA</span>
-<h2>AYAZ GROUP</h2>
-<p>Enerjide sürdürülebilir bir gelecek için.</p>
+<span>HAKKIMIZDA</span><h2>AYAZ GROUP</h2><p>Enerjide sürdürülebilir bir gelecek için.</p>
 </div>
-
 <div class="about-content">
-<p>
-AYAZ GROUP, yenilenebilir enerji sektöründe
-çözümler geliştirmeyi hedefleyen bir markadır.
-Güneş enerjisi sistemleri, enerji depolama ve
-teknik hizmetler alanlarında verimlilik,
-kalite ve güven odaklı bir yaklaşım benimser.
-</p>
-
-<p>
-Amacımız, bireysel ve kurumsal müşteriler için
-doğru projelendirme ve kaliteli uygulama
-anlayışıyla enerji dönüşümüne katkı sağlamaktır.
-</p>
+<p>AYAZ GROUP, yenilenebilir enerji sektöründe çözümler geliştirmeyi hedefleyen bir markadır. Güneş enerjisi sistemleri, enerji depolama ve teknik hizmetler alanlarında verimlilik, kalite ve güven odaklı bir yaklaşım benimser.</p>
+<p>Amacımız, bireysel ve kurumsal müşteriler için doğru projelendirme ve kaliteli uygulama anlayışıyla enerji dönüşümüne katkı sağlamaktır.</p>
 </div>
-
 </div>
 </section>
 
 <section id="hizmetler">
 <div class="container">
-
 <div class="section-title">
-<span>ÇÖZÜMLERİMİZ</span>
-<h2>Hizmetlerimiz</h2>
-<p>İhtiyaca uygun yenilenebilir enerji çözümleri.</p>
+<span>ÇÖZÜMLERİMİZ</span><h2>Hizmetlerimiz</h2><p>İhtiyaca uygun yenilenebilir enerji çözümleri.</p>
 </div>
-
 <div class="services-grid">
-
-<div class="card">
-<div class="card-icon">☀️</div>
-<h3>Çatı GES</h3>
-<p>Fabrika, işletme ve ticari yapılar için güneş enerjisi sistemleri.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🌞</div>
-<h3>Arazi GES</h3>
-<p>Arazi tipi güneş enerjisi projeleri için planlama ve uygulama çözümleri.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🔋</div>
-<h3>Enerji Depolama</h3>
-<p>Batarya sistemleri ve enerji depolama çözümleri.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">⚙️</div>
-<h3>Teknik Destek</h3>
-<p>Güneş enerjisi sistemlerinde kontrol, bakım ve teknik destek hizmetleri.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">📐</div>
-<h3>Projelendirme</h3>
-<p>İhtiyaca uygun sistem tasarımı ve teknik proje planlaması.</p>
-</div>
-
-<div class="card">
-<div class="card-icon">🤝</div>
-<h3>Enerji Danışmanlığı</h3>
-<p>Enerji yatırımları için çözüm odaklı danışmanlık ve yönlendirme.</p>
-</div>
-
+<div class="card"><div class="card-icon">☀️</div><h3>Çatı GES</h3><p>Fabrika, işletme ve ticari yapılar için güneş enerjisi sistemleri.</p></div>
+<div class="card"><div class="card-icon">🌞</div><h3>Arazi GES</h3><p>Arazi tipi güneş enerjisi projeleri için planlama ve uygulama çözümleri.</p></div>
+<div class="card"><div class="card-icon">🔋</div><h3>Enerji Depolama</h3><p>Batarya sistemleri ve enerji depolama çözümleri.</p></div>
+<div class="card"><div class="card-icon">⚙️</div><h3>Teknik Destek</h3><p>Güneş enerjisi sistemlerinde kontrol, bakım ve teknik destek hizmetleri.</p></div>
+<div class="card"><div class="card-icon">📐</div><h3>Projelendirme</h3><p>İhtiyaca uygun sistem tasarımı ve teknik proje planlaması.</p></div>
+<div class="card"><div class="card-icon">🤝</div><h3>Enerji Danışmanlığı</h3><p>Enerji yatırımları için çözüm odaklı danışmanlık ve yönlendirme.</p></div>
 </div>
 </div>
 </section>
 
 <section class="projects" id="projeler">
 <div class="container">
-
 <div class="section-title">
-<span>ÇALIŞMALARIMIZ</span>
-<h2>GES Projeleri</h2>
-<p>Enerji yatırımlarına değer katan çözümler.</p>
+<span>ÇALIŞMALARIMIZ</span><h2>GES Projeleri</h2><p>Enerji yatırımlarına değer katan çözümler.</p>
 </div>
-
 <div class="project-box">
 <h3>Projelerimizle Tanışın</h3>
-<p>
-Tamamlanan projelerimizi, saha çalışmalarımızı
-ve teknik uygulamalarımızı bu alanda paylaşacağız.
-</p>
+<p>Tamamlanan projelerimizi, saha çalışmalarımızı ve teknik uygulamalarımızı bu alanda paylaşacağız.</p>
 </div>
-
 </div>
 </section>
 
 <section id="neden-biz">
 <div class="container">
-
 <div class="section-title">
-<span>AYAZ GROUP FARKI</span>
-<h2>Neden Biz?</h2>
-<p>Güven, kalite ve sürdürülebilirlik odaklı yaklaşım.</p>
+<span>AYAZ GROUP FARKI</span><h2>Neden Biz?</h2><p>Güven, kalite ve sürdürülebilirlik odaklı yaklaşım.</p>
 </div>
-
 <div class="why-grid">
-
-<div class="why-item">
-<h3>Kalite Odaklılık</h3>
-<p>Her aşamada doğru ürün ve uygulama anlayışı.</p>
-</div>
-
-<div class="why-item">
-<h3>Teknik Yaklaşım</h3>
-<p>İhtiyaca uygun sistem ve çözüm planlaması.</p>
-</div>
-
-<div class="why-item">
-<h3>Sürdürülebilirlik</h3>
-<p>Temiz enerji ve verimli kaynak kullanımı.</p>
-</div>
-
+<div class="why-item"><h3>Kalite Odaklılık</h3><p>Her aşamada doğru ürün ve uygulama anlayışı.</p></div>
+<div class="why-item"><h3>Teknik Yaklaşım</h3><p>İhtiyaca uygun sistem ve çözüm planlaması.</p></div>
+<div class="why-item"><h3>Sürdürülebilirlik</h3><p>Temiz enerji ve verimli kaynak kullanımı.</p></div>
 </div>
 </div>
 </section>
 
 <section class="contact" id="iletisim">
 <div class="container">
-
 <div class="section-title">
-<span>BİZİMLE İLETİŞİME GEÇİN</span>
-<h2>Enerji Yatırımınızı Konuşalım</h2>
+<span>BİZİMLE İLETİŞİME GEÇİN</span><h2>Enerji Yatırımınızı Konuşalım</h2>
 </div>
-
 <div class="contact-content">
-<p>
-GES projeleri, enerji depolama ve teknik hizmetler
-hakkında bilgi almak için bizimle iletişime geçebilirsiniz.
-</p>
-
+<p>GES projeleri, enerji depolama ve teknik hizmetler hakkında bilgi almak için bizimle iletişime geçebilirsiniz.</p>
 <div class="contact-buttons">
 <a href="https://wa.me/905XXXXXXXXX" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp'tan Ulaş</a>
 <a href="mailto:iletisim@ayazgroup.com" class="btn btn-secondary">E-posta Gönder</a>
 </div>
 </div>
-
 </div>
 </section>
-
 </main>
 
 <footer>
@@ -706,23 +229,19 @@ hakkında bilgi almak için bizimle iletişime geçebilirsiniz.
 <p>Geleceğe Güç Katıyoruz.</p>
 </footer>
 
-<a href="https://wa.me/905447157701" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp üzerinden iletişim">
-WhatsApp
-</a>
+<a href="https://wa.me/905447157701" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp üzerinden iletişim">WhatsApp</a>
 
 <script>
-function toggleMenu() {
+function toggleMenu(){
 const menu=document.getElementById("navLinks");
 const button=document.querySelector(".menu-toggle");
 menu.classList.toggle("active");
 button.setAttribute("aria-expanded",menu.classList.contains("active"));
 }
-
-function closeMenu() {
+function closeMenu(){
 document.getElementById("navLinks").classList.remove("active");
 document.querySelector(".menu-toggle").setAttribute("aria-expanded","false");
 }
 </script>
-
 </body>
 </html>
